@@ -337,11 +337,12 @@ export LDFLAGS="-L/usr/local/opt/zlib/lib -L/usr/local/opt/bzip2/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include -I/usr/local/opt/bzip2/include"
 
 
-# start terminal in home directory
+# start terminal in home directory, alias xdg-open to open
 if echo $OSTYPE | grep "darwin" > /dev/null; then
 	:
 else
 cd
+alias open='xdg-open'
 fi
 
 export PATH="/usr/local/opt/swig@3/bin:$PATH"
