@@ -324,7 +324,7 @@ export PATH="~/bin:$PATH"
 export NAYVY_PYPROJECT_ROOT_MARKERS='pyproject.toml,setup.py,.git'  # comma-separated format
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
+#eval "$(pyenv init --path)"
 alias ipython='python -m IPython --TerminalInteractiveShell.editing_mode=vi --no-autoindent'
 alias ipython3='python3 -m IPython --TerminalInteractiveShell.editing_mode=vi --no-autoindent'
 
@@ -346,4 +346,10 @@ alias open='xdg-open'
 fi
 
 export PATH="/usr/local/opt/swig@3/bin:$PATH"
+
+# setup thesis
+# go to root of thesis repo
+bindkey -s "\C-t" ' cd ~/study/masters_thesis/sentiment-analysis-in-ce \n'
+# activate thesis environment
+bindkey -s "^E" ' pyenv activate sentiment-analysis-in-ce \n'
 
