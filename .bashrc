@@ -169,3 +169,7 @@ alias see='wslview'
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# run pyenv virtualenv from Makefile
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
