@@ -94,6 +94,13 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-dispatch'
 
 Plug 'apalmer1377/factorus'
+"Automatic docstring insertion
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
+let g:pydocstring_formatter = 'numpy'
+nnoremap <Leader>ds :Pydocstring<CR>
+nnoremap <Leader>df :PydocstringFormat<CR>
+
+Plug 'psf/black'
 
 " Amazing when writing markdown in vim, just paste image from clipboard
 Plug 'ferrine/md-img-paste.vim'
@@ -970,10 +977,10 @@ let g:ale_fixers = {
 let g:ale_fix_on_save = 1
 
 " Format by black on save
-"augroup black_python
-"  autocmd!
-"   autocmd BufWritePre *.py :Format
-"augroup END
+augroup black_python
+    autocmd!
+    autocmd BufWritePre *.py :Format
+augroup END
 "
 
 " This is for preserving folds, if not working, add incremental number to the
@@ -1029,6 +1036,10 @@ nnoremap <Leader>di oimport ipdb; ipdb.set_trace();<esc>==
 
 " Send first word to ipython
 map <Leader>q :norm ^viW <esc>:SlimuxREPLSendSelection<CR>
+map <Leader>;d :call SlimuxSendCommand('%debug')<CR>
+map <Leader>;c :call SlimuxSendCommand(expand('<cword>') . '.columns')<CR>
+map <Leader>;l :call SlimuxSendCommand('len(' . expand('<cword>') . ')')<CR>
+map <Leader>;s :call SlimuxSendCommand('sum(' . expand('<cword>') . ')')<CR>
 
 " reload packages
 map <Leader>r :call SlimuxSendCommand('%load_ext autoreload')<esc>:call SlimuxSendCommand('autoreload')<CR>
