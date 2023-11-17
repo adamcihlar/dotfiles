@@ -184,12 +184,12 @@ bindkey -v '^?' backward-delete-char
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.bin:$PATH
-export PYENV_VERSION=3.9.11
+export PYENV_VERSION=3.11.6
 export PATH=$HOME/.local/bin:$PATH
 
-export PATH=/User/adamcihlar/.pyenv/versions/3.9.11/bin/:$PATH
-export PATH=~/.pyenv/versions/3.9.11/bin/:$PATH
-export PATH=~/.pyenv/versions/3.9.11/bin:$PATH
+export PATH=/User/adamcihlar/.pyenv/versions/3.11.6/bin/:$PATH
+export PATH=~/.pyenv/versions/3.11.6/bin/:$PATH
+export PATH=~/.pyenv/versions/3.11.6/bin:$PATH
 
 HIST_STAMPS="mm/dd/yyyy"
 
