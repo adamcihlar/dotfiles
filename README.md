@@ -14,5 +14,7 @@
     - `sudo apt-get update && sudo apt-get install yarn`
 12. Because of some plugins I am using vim 9, I used [this](https://itsfoss.com/install-latest-vim-ubuntu/) to install it.
 13. Install lfcd (= better ranger) `curl -L https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz | tar xzC ~/.local/bin`.
-14. Run `:CocConfig` in vim terminal and paste [this](https://github.com/marekzidek/dotfiles/blob/master/PUT_INTO_PROJECT_.vim%5Ccoc-settings.json).
-15. `pip install black, isort, doq`
+14. Install ripgrep `sudo apt-get install ripgrep`
+15. Install [fzf](https://www.linode.com/docs/guides/how-to-use-fzf/#command-line-tool)
+16. Run `:CocConfig` in vim terminal and paste [this](https://github.com/marekzidek/dotfiles/blob/master/PUT_INTO_PROJECT_.vim%5Ccoc-settings.json).
+17. `pip install black, isort, doq`
