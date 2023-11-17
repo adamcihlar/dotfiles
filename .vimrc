@@ -1044,3 +1044,4 @@ map <Leader>;s :call SlimuxSendCommand('sum(' . expand('<cword>') . ')')<CR>
 " reload packages
 map <Leader>r :call SlimuxSendCommand('%load_ext autoreload')<esc>:call SlimuxSendCommand('autoreload')<CR>
 map <Leader>ar :call SlimuxSendCommand('%load_ext autoreload')<esc>:call SlimuxSendCommand('autoreload 2')<CR>
+
