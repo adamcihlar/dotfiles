@@ -9,9 +9,9 @@
 7. Restart the terminal.
 8. Install nodejs>=16.x for one of the vim plugins (look up how to, it changes).
 9. Install yarn for one of the vim plugins
-    * `curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null`
-    * `echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    * `sudo apt-get update && sudo apt-get install yarn`
+    - `curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null`
+    - `echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
+    - `sudo apt-get update && sudo apt-get install yarn`
 11. Run `sudo apt-get install libncurses5-dev libncursesw5-dev` for installation of vim 9 (maybe not needed).
 12. Because of some plugins I am using vim 9, I used [this](https://itsfoss.com/install-latest-vim-ubuntu/) to install it.
 13. Install [go](https://go.dev/doc/install)
