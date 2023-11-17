@@ -135,7 +135,7 @@ if echo $OSTYPE | grep "darwin" > /dev/null; then
 	# Use brew installed vim, because the basic is not compiled with +clipboard
 	alias vim=/usr/local/bin/vim
 else
-	alias vim=/usr/local/bin/vim
+	alias vim=/usr/bin/vim
 fi
 
 if echo $OSTYPE | grep "darwin" > /dev/null; then
