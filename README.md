@@ -5,7 +5,7 @@
 3. Connect the new device to your GitHub (generate and add SSH key etc.).
 4. Git clone dotfiles.
 5. Delete original .bashrc and run `./symlink_dotfiles.sh`.
-6. Install zsh if you don't have it and run `chsh -s /usr/bin/zsh` to make it a default shell.
+6. Install zsh `sudo apt install zsh` if you don't have it and run `chsh -s /usr/bin/zsh` to make it a default shell.
 7. Restart the terminal.
 8. Install nodejs>=16.x for one of the vim plugins, look [here](https://stackoverflow.com/questions/63312642/how-to-install-node-tar-xz-file-in-linux).
 9. Install yarn for one of the vim plugins
