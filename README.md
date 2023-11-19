@@ -14,7 +14,11 @@
 12. Install [go](https://go.dev/doc/install)
 13. Run `export PATH="$(go env GOPATH)/bin:$PATH"` [because](https://askubuntu.com/questions/1467641/installing-the-lf-file-manager-lf-command-not-found-after-installation)...
 14. Install [lfcd](https://github.com/gokcehan/lf) `env CGO_ENABLED=0 go install -ldflags="-s -w" github.com/gokcehan/lf@latest`.
-18. 12. Because of some plugins I am using vim 9, I used [this](https://itsfoss.com/install-latest-vim-ubuntu/) to install it.
-19. `pip install black, isort, doq`
+15. Because of some plugins I am using vim 9, I used [this](https://itsfoss.com/install-latest-vim-ubuntu/) to install it.
+
 17. Run `:CocConfig` in vim terminal and paste [this](https://github.com/marekzidek/dotfiles/blob/master/PUT_INTO_PROJECT_.vim%5Ccoc-settings.json).
-18. pyenv ???
+18. Install pyenv `git clone https://github.com/pyenv/pyenv.git ~/.pyenv`
+19. And pyenv virtualenv `git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv`
+20. Install a desired version of python (if fails look [here](https://stackoverflow.com/questions/67807596/pyenv-install-3-x-build-failed-ubuntu-20-04-using-python-build-20180424))
+21. `pip install black, isort, doq`
+22. 
