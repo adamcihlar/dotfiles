@@ -5,16 +5,22 @@
 3. Connect the new device to your GitHub (generate and add SSH key etc.).
 4. Git clone dotfiles.
 5. Delete original .bashrc and run `./symlink_dotfiles.sh`.
-6. Install zsh if you don't have it and run `chsh -s /usr/bin/zsh` to make it a default shell.
+6. Install zsh `sudo apt install zsh` if you don't have it and run `chsh -s /usr/bin/zsh` to make it a default shell.
 7. Restart the terminal.
-8. Install nodejs>=16.x for one of the vim plugins, look [here](https://stackoverflow.com/questions/63312642/how-to-install-node-tar-xz-file-in-linux).
-9. Install yarn for one of the vim plugins
-    - `curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null`
-    - `echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-    - `sudo apt-get update && sudo apt-get install yarn`
-12. Because of some plugins I am using vim 9, I used [this](https://itsfoss.com/install-latest-vim-ubuntu/) to install it.
-13. Install lfcd (= better ranger) `curl -L https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz | tar xzC ~/.local/bin`.
-14. Install ripgrep `sudo apt-get install ripgrep`
-15. Install [fzf](https://www.linode.com/docs/guides/how-to-use-fzf/#command-line-tool)
-16. Run `:CocConfig` in vim terminal and paste [this](https://github.com/marekzidek/dotfiles/blob/master/PUT_INTO_PROJECT_.vim%5Ccoc-settings.json).
-17. `pip install black, isort, doq`
+8. Install nodejs>=16.x for one of the vim plugins (coc.nvim) `curl -sL install-node.vercel.app/lts | sudo bash`.
+9. Install yarn for one of the vim plugins (coc.nvim) `npm install -g yarn`.
+10. Install ripgrep `sudo apt-get install ripgrep`
+11. Install [fzf](https://www.linode.com/docs/guides/how-to-use-fzf/#command-line-tool)
+12. Install [go](https://go.dev/doc/install)
+13. Run `export PATH="$(go env GOPATH)/bin:$PATH"` [because](https://askubuntu.com/questions/1467641/installing-the-lf-file-manager-lf-command-not-found-after-installation)...
+14. Install [lfcd](https://github.com/gokcehan/lf) `env CGO_ENABLED=0 go install -ldflags="-s -w" github.com/gokcehan/lf@latest`.
+15. Install pyenv `git clone https://github.com/pyenv/pyenv.git ~/.pyenv`
+19. And pyenv virtualenv `git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv`
+20. Install a desired version of python (if fails look [here](https://stackoverflow.com/questions/67807596/pyenv-install-3-x-build-failed-ubuntu-20-04-using-python-build-20180424))
+21. `pip install black, isort, doq, jedi`
+22. 
+16. Because of some plugins I am using vim 9, I used [this](https://itsfoss.com/install-latest-vim-ubuntu/) to install it.
+
+17. In vim run `:CocInstall coc-pyright`
+
+22. 
