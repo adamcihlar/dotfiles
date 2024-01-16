@@ -354,3 +354,6 @@ bindkey -s "\C-t" ' cd ~/study/masters_thesis/sentiment-analysis-in-ce \n'
 # activate thesis environment
 bindkey -s "^E" ' pyenv activate sentiment-analysis-in-ce \n'
 
+# to install lf install go and add to path
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$(go env GOPATH)/bin:$PATH"

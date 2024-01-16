@@ -9,3 +9,6 @@ ln -s $(pwd)/lf/lfrc ~/.config/lf/lfrc
 mkdir -p ~/.ipython/profile_default/startup
 ln -s $(pwd)/ipython/profile_default/startup/keybindings.py ~/.ipython/profile_default/startup/keybindings.py
 ln -s $(pwd)/ipython/profile_default/startup/start.ipy ~/.ipython/profile_default/startup/start.ipy
+
+mkdir -p ~/.vim
+ln -s $(pwd)/.vim/coc-settings.json ~/.vim/coc-settings.json

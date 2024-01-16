@@ -19,10 +19,15 @@ set shortmess+=c
 " diagnostics appear/become resolved.
 if has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
+  " set signcolumn=number
 else
-  set signcolumn=yes
+  " set signcolumn=yes
 endif
+
+" always show the signcolumn
+autocmd BufRead,BufNewFile * setlocal signcolumn=no
+" remove the color from the signColumn
+autocmd BufRead,BufNewFile * highlight clear SignColumn
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -127,3 +132,26 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Press Tab and Shift+Tab and navigate around completion selections
+function! s:check_back_space() abort
+  let col = col('.') -1
+  return !col || getline('.')[col - 1] =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<Tab>" :
+  \ coc#refresh()
+inoremap <silent><expr> <S-Tab>
+  \ pumvisible() ? "\<C-p>" :
+  \ <SID>check_back_space() ? "\<S-Tab>" :
+  \ coc#refresh()
+
+" Press Enter to select completion items or expand snippets
+inoremap <silent><expr> <CR>
+  \ pumvisible() ? "\<C-y>" :
+  \ "\<C-g>u\<CR>"
+
+let g:coc_snippet_next = '<Tab>'              " Use Tab to jump to next snippet placeholder
+let g:coc_snippet_prev = '<S-Tab>'            " Use Shift+Tab to jump to previous snippet placeholder
