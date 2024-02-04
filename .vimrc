@@ -182,8 +182,8 @@ let g:NERDDefaultAlign = 'start'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
 Plug 'sstallion/vim-cursorline'
-Plug 'neoclide/coc.nvim', {'tag': 'v0.0.81'}
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'tag': 'v0.0.81'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 "Coc is confused? run ":CocRes'
 
