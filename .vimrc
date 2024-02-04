@@ -137,7 +137,11 @@ Plug 'junegunn/goyo.vim'
 " Automatically clear search highlighting after move of cursor.
 Plug 'haya14busa/is.vim'
 
-let g:UltiSnipsExpandTrigger = "<nop>"
+let g:UltiSnipsExpandTrigger='<Nop>'
+let g:UltiSnipsJumpForwardTrigger = '<TAB>'
+let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
 
 Plug 'gruvbox-community/gruvbox'
 " Plug 'cocopon/iceberg.vim'
@@ -404,7 +408,9 @@ nnoremap <leader><leader>f :call Flake8()<CR>
 
 let g:cocPlugInstall = 'yarn install --frozen-lockfile'
 Plug 'neoclide/coc-json', {'do': cocPlugInstall }
-Plug 'neoclide/coc-python', {'do': cocPlugInstall }
+"Plug 'neoclide/coc-python', {'do': cocPlugInstall }
+" coc-python is obsolete - use coc-jedi or coc-pyright instead - run
+" :CocInstall pyright
 Plug 'neoclide/coc-snippets', {'do': cocPlugInstall }
 
 source ~/dotfiles/coc_config.vim
@@ -424,10 +430,10 @@ Plug 'honza/vim-snippets'
 
 let g:ultisnips_python_style="google"
 "inoremap <silent><expr> <TAB>
-      "\ pumvisible() ? coc#_select_confirm() :
-      "\ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      "\ <SID>check_back_space() ? "\<TAB>" :
-      "\ coc#refresh()
+"      \ pumvisible() ? coc#_select_confirm() :
+"      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
 
 
 function! s:check_back_space() abort
@@ -435,9 +441,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-let g:coc_snippet_next = '<tab>'
-
-
+"let g:coc_snippet_next = '<tab>'
 
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -1004,7 +1008,7 @@ augroup END
 
 set cursorline
 
-let g:pythonStdlibPath = '~/.pyenv/versions/3.7.7/lib/python3.7/site-packages/'
+let g:pythonStdlibPath = '~/.pyenv/versions/3.11.6/lib/python3.11/site-packages/'
 
 
 function! RooterFileShow() abort
@@ -1042,6 +1046,4 @@ map <Leader>;l :call SlimuxSendCommand('len(' . expand('<cword>') . ')')<CR>
 map <Leader>;s :call SlimuxSendCommand('sum(' . expand('<cword>') . ')')<CR>
 
 " reload packages
-map <Leader>r :call SlimuxSendCommand('%load_ext autoreload')<esc>:call SlimuxSendCommand('autoreload')<CR>
 map <Leader>ar :call SlimuxSendCommand('%load_ext autoreload')<esc>:call SlimuxSendCommand('autoreload 2')<CR>
-

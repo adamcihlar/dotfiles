@@ -135,7 +135,7 @@ if echo $OSTYPE | grep "darwin" > /dev/null; then
 	# Use brew installed vim, because the basic is not compiled with +clipboard
 	alias vim=/usr/local/bin/vim
 else
-	alias vim=/usr/local/bin/vim
+	alias vim=/usr/bin/vim
 fi
 
 if echo $OSTYPE | grep "darwin" > /dev/null; then
@@ -184,12 +184,12 @@ bindkey -v '^?' backward-delete-char
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.bin:$PATH
-export PYENV_VERSION=3.9.11
+export PYENV_VERSION=3.11.6
 export PATH=$HOME/.local/bin:$PATH
 
-export PATH=/User/adamcihlar/.pyenv/versions/3.9.11/bin/:$PATH
-export PATH=~/.pyenv/versions/3.9.11/bin/:$PATH
-export PATH=~/.pyenv/versions/3.9.11/bin:$PATH
+export PATH=/User/adamcihlar/.pyenv/versions/3.11.6/bin/:$PATH
+export PATH=~/.pyenv/versions/3.11.6/bin/:$PATH
+export PATH=~/.pyenv/versions/3.11.6/bin:$PATH
 
 HIST_STAMPS="mm/dd/yyyy"
 
@@ -354,3 +354,6 @@ bindkey -s "\C-t" ' cd ~/study/masters_thesis/sentiment-analysis-in-ce \n'
 # activate thesis environment
 bindkey -s "^E" ' pyenv activate sentiment-analysis-in-ce \n'
 
+# to install lf install go and add to path
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$(go env GOPATH)/bin:$PATH"
